@@ -1,40 +1,36 @@
 @use './variables.scss';
 
-
-
 .l-container {
-    max-width: 1199px;
-    padding: 0 20px;
-
-    @media (max-width: 834px) {
-        padding: 0 10px;
-    }
+    max-width: 1222px;
 }
 
 .l-primary-button {
-    background-color: var(--color-blue);
+    background-color: #1f1f1f;
     border-radius: 100px;
-    color: var(--color-text);
+    color: #fff;
+    padding: 0 60px;
     text-align: center;
-    padding: 12px 35px !important;
     width: fit-content;
-    font-size: var(--fs-md);
+    font-size: 16px;
     font-weight: 500;
-    line-height: var(--lh-lg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 130%;
+    cursor: pointer;
 }
 
 .l-primary-button:hover {
-    background-color: var(--color-button-hovered);
+    box-shadow: 0 0 0 2px white, 0 0 0 4px #3a2f28;
 }
 
 .l-primary-button.secondary {
     background: none;
-    border: 2px solid var(--color-white);
+    color: #1f1f1f;
+    border: 2px solid #000;
 }
 
 .l-primary-button.secondary:hover {
-    border-color: var(--color-blue);
-    color: var(--color-blue);
 }
 
 .l-primary-input {
