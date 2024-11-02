@@ -2,6 +2,7 @@
 
 .l-container {
     max-width: 1222px;
+    margin: 0 auto;
 }
 
 .l-primary-button {
@@ -36,24 +37,10 @@
     color: #fff;
 }
 
-.l-primary-input {
-    width: 200px;
-    height: 100%;
-    padding-left: 18px;
-    background: none;
-    border: 1px solid var(--color-gray);
-    border-radius: 12px;
+.l-text-red {
+    color: #F54932;
+    font-weight: 700;
 }
-
-.l-primary-input:hover {
-    border-color: var(--color-text);
-    color: var(--color-text);
-}
-
-.l-primary-input:hover::placeholder {
-    color: var(--color-text);
-}
-
 .l-title {
     font-size: var(--fs-4xl);
     font-weight: 600;

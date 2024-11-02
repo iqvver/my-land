@@ -23,14 +23,15 @@ import RunningLine from './modules/RunningLine.vue';
                 <div class="hero__button l-primary-button secondary">Подробнее о турнире</div>
             </div>
         </div>
-        <RunningLine />
+        
     </section>
+    <RunningLine />
 </template>
 
 <style lang="scss" scoped>
 .hero {
     &-container {
-        height: 100vh;
+        min-height: 700px;
         background-image: url('~/public/images/hero.png');
         background-position: top;
         background-repeat: no-repeat;

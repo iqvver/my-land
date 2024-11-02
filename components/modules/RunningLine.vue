@@ -7,8 +7,8 @@
 </template>
 <style scoped lang="scss">
 .line {
-    background-color: red;
-    margin: 90px auto;
+    background-color: #F54932;
+    margin: 0 auto;
     width: 100%;
     height: 60px;
     font-weight: 400;
