@@ -4,5 +4,7 @@
     <HeroSection />
     <IdeaSection />
     <SessionSection />
+    <StageSection />
+    <CarouselSection />
 </template>
 <style scoped lang="scss"></style>
