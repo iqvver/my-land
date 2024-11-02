@@ -1,0 +1,5 @@
+@import '~/assets/scss/landing.scss';
+
+* {
+    box-sizing: border-box;
+}
