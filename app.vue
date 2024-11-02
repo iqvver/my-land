@@ -1,5 +1,5 @@
 <script setup lang="ts"></script>
 <template>
-  <HeroSection />
+    <HeroSection />
 </template>
 <style scoped lang="scss"></style>

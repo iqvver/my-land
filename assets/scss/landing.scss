@@ -21,7 +21,8 @@
 }
 
 .l-primary-button:hover {
-    box-shadow: 0 0 0 2px white, 0 0 0 4px #3a2f28;
+    background-color: #FBCE51;
+    color: #1f1f1f;
 }
 
 .l-primary-button.secondary {
@@ -31,6 +32,8 @@
 }
 
 .l-primary-button.secondary:hover {
+    background-color: #1f1f1f;
+    color: #fff;
 }
 
 .l-primary-input {

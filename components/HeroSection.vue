@@ -1,9 +1,13 @@
+<script setup lang="ts">
+import RunningLine from './modules/RunningLine.vue';
+</script>
+
 <template>
     <section class="hero-container">
         <div class="l-container hero__content">
             <div class="hero__logo-wrapper">
                 <div v-for="img in 4">
-                    <img src="../public//icons/horse.svg" class="hero__logo-img" alt="horse" />
+                    <img src="~/public/icons/horse.svg" class="hero__logo-img" alt="horse" />
                 </div>
                 <div class="hero__logo-text">Клуб <br />четырех коней</div>
             </div>
@@ -19,6 +23,7 @@
                 <div class="hero__button l-primary-button secondary">Подробнее о турнире</div>
             </div>
         </div>
+        <RunningLine />
     </section>
 </template>
 
@@ -26,7 +31,7 @@
 .hero {
     &-container {
         height: 100vh;
-        background-image: url('../public/images/hero.png');
+        background-image: url('~/public/images/hero.png');
         background-position: top;
         background-repeat: no-repeat;
         background-size: auto;
