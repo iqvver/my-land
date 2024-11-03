@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import RunningLine from './modules/RunningLine.vue';
+import RunningLine from './modules/RunningLine.vue'
 </script>
 
 <template>
@@ -23,7 +23,6 @@ import RunningLine from './modules/RunningLine.vue';
                 <div class="hero__button l-primary-button secondary">Подробнее о турнире</div>
             </div>
         </div>
-        
     </section>
     <RunningLine />
 </template>

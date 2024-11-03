@@ -2,6 +2,7 @@
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide } from 'vue3-carousel'
 import CarouselCard from './modules/CarouselCard.vue'
+import RunningLine from './modules/RunningLine.vue'
 
 const config = {
     itemsToShow: 3,
@@ -73,7 +74,9 @@ const playerList = [
             </Slide>
         </Carousel>
     </section>
+    <RunningLine />
 </template>
+
 <style scoped lang="scss">
 .carou {
     margin-top: 200px;
