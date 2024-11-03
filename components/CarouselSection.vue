@@ -4,6 +4,14 @@ import { Carousel, Slide } from 'vue3-carousel'
 import CarouselCard from './modules/CarouselCard.vue'
 import RunningLine from './modules/RunningLine.vue'
 
+interface PlayerInterface {
+    id: number
+    title: string
+    name: string
+    img: string
+}
+interface PlayerInterfaces extends Array<PlayerInterface> {}
+
 const config = {
     itemsToShow: 3,
     itemsToScroll: 1,
@@ -15,7 +23,7 @@ const currentSlide = ref(0)
 const next = () => carouselRef.value.next()
 const prev = () => carouselRef.value.prev()
 
-const playerList = [
+const playerList: PlayerInterfaces = [
     {
         id: 0,
         title: 'Чемпион мира по шахматам',

@@ -42,7 +42,7 @@ import RunningLine from './modules/RunningLine.vue'
     }
 
     &__content {
-        padding: 26px 0 0 0;
+        padding: 26px 5px 0 5px;
         margin: 0 auto;
     }
 
