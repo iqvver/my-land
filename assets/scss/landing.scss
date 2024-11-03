@@ -41,27 +41,3 @@
     color: #F54932;
     font-weight: 700;
 }
-.l-title {
-    font-size: var(--fs-4xl);
-    font-weight: 600;
-    line-height: var(--lh-7xl);
-    color: var(--color-text);
-
-    &_color-reverse {
-        color: var(--color-dark-blue);
-    }
-}
-
-.l-title_2 {
-    font-size: var(--fs-xl);
-    font-weight: 600;
-    line-height: var(--lh-3xl);
-    color: var(--color-dark-blue);
-}
-
-.l-title_3 {
-    font-size: var(--fs-md);
-    font-weight: 400;
-    line-height: var(--lh-lg);
-    color: var(--color-gray);
-}

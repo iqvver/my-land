@@ -1,0 +1,56 @@
+<script setup lang="ts">
+const { title, name, img } = defineProps<{
+    title: string
+    name: string
+    img: string
+}>()
+</script>
+<template>
+    <div class="card">
+        <div class="card__img">
+            <img :src="img" />
+        </div>
+        <div class="card__name">
+            {{ name }}
+        </div>
+        <div class="card__title">
+            {{ title }}
+        </div>
+        <div class="card__descr">Подробнее</div>
+    </div>
+</template>
+<style scoped lang="scss">
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__name {
+        margin-top: 28px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 120%;
+        color: #313131;
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 120%;
+        color: #313131;
+        opacity: 0.6;
+    }
+
+    &__descr {
+        margin-top: 10px;
+        color: #3057a2;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 113px;
+        height: 35px;
+        border: 1px solid #3057a2;
+        border-radius: 62px;
+    }
+}
+</style>
