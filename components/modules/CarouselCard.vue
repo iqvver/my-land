@@ -24,6 +24,18 @@ const { title, name, img } = defineProps<{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 394px;
+    height: 462px;
+
+    &__img {
+        //width: 50px;
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
     &__name {
         margin-top: 28px;
         font-weight: 600;
@@ -51,6 +63,11 @@ const { title, name, img } = defineProps<{
         height: 35px;
         border: 1px solid #3057a2;
         border-radius: 62px;
+
+        &:hover {
+            background-color: #3057a2;
+            color: #ffffff;
+        }
     }
 }
 </style>

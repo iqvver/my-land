@@ -76,9 +76,7 @@ const playerList: PlayerInterfaces = [
         </div>
         <Carousel ref="carouselRef" v-bind="config" v-model="currentSlide">
             <Slide v-for="slide in playerList" :key="slide.id">
-                <div class="carou__item">
-                    <CarouselCard :title="slide.title" :name="slide.name" :img="slide.img" />
-                </div>
+                <CarouselCard :title="slide.title" :name="slide.name" :img="slide.img" />
             </Slide>
         </Carousel>
     </section>
@@ -120,6 +118,10 @@ const playerList: PlayerInterfaces = [
             display: flex;
             justify-content: center;
             align-items: center;
+
+            &:hover {
+                background-color: #fbce51;
+            }
         }
 
         &_descr {

@@ -91,14 +91,14 @@
     }
     &__wrapper {
         display: grid;
-        grid-template-rows: repeat(3, 112px);
-        grid-template-columns: repeat(3, 394px);
+        grid-template-rows: repeat(3, minmax(1fr, 112px));
+        grid-template-columns: repeat(3, minmax(1fr, 394px));
         gap: 20px;
         width: 100%;
         height: 100%;
     }
     &__item {
-        background-image: url('~/public/images/card.png');
+        background-image: url('/public/images/card.png');
         background-color: #e9ded4;
         background-blend-mode: overlay;
         display: flex;

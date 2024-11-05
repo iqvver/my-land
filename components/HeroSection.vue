@@ -82,6 +82,10 @@ import RunningLine from './modules/RunningLine.vue'
         & div {
             text-align: center;
         }
+
+        @media (width < 1100px) {
+            font-size: 250%;
+        }
     }
 
     &__subtitle {
@@ -97,7 +101,13 @@ import RunningLine from './modules/RunningLine.vue'
         display: flex;
         gap: 19px;
         margin-top: 40px;
+
+        @media (width < 850px) {
+            flex-direction: column;
+            justify-content: center;
+        }
     }
+
     &__button {
         width: 263px;
         height: 72px;

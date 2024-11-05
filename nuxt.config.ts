@@ -1,15 +1,17 @@
 export default defineNuxtConfig({
-    devtools: { enabled: true },
+  devtools: { enabled: true },
 
-    app: {
-        baseURL: '/',
-    },
+  app: {
+      baseURL: '/',
+  },
 
-    components: [
-        {
-            path: '~/components',
-            extensions: ['.vue'],
-        },
-    ],
-    css: ['assets/global.css'],
+  components: [
+      {
+          path: '~/components',
+          extensions: ['.vue'],
+      },
+  ],
+
+  css: ['assets/global.css'],
+  compatibilityDate: '2024-11-05',
 })
