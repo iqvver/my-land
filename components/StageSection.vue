@@ -66,11 +66,20 @@
             font-size: 250%;
             margin-top: 0;
         }
+
+        @media (width < 550px) {
+            display: none;
+        }
     }
 }
 .stage__subtitle {
     display: flex;
     align-items: center;
+
+    @media (width < 850px) {
+        flex-direction: column;
+        align-items: normal;
+    }
 
     &::after {
         content: 'Будущие источники обогащения васюкинцев';
@@ -78,8 +87,11 @@
         font-size: 20px;
         line-height: 100%;
         color: #3057a2;
-        width: 280px;
         margin-left: 10px;
+
+        @media (width < 850px) {
+            margin-left: 0px;
+        }
     }
 }
 .stage {
@@ -93,7 +105,6 @@
     @media (width < 650px) {
         margin-top: 30px;
     }
-    
 
     &__title {
         font-weight: 400;
@@ -103,6 +114,11 @@
         width: 60%;
         height: 48px;
         margin-bottom: 154px;
+
+        @media (width < 850px) {
+            width: 100%;
+            font-size: 300%;
+        }
     }
     &__wrapper {
         padding: 10px;
@@ -113,6 +129,11 @@
 
         @media (width < 1000px) {
             grid-template: repeat(4, max-content) / repeat(2, 50%);
+            gap: 10px;
+        }
+
+        @media (width < 550px) {
+            grid-template: repeat(7, max-content) / 100%;
             gap: 10px;
         }
     }
@@ -162,6 +183,11 @@
                 @media (width < 1000px) {
                     grid-row: auto;
                     grid-column: 1 / 3;
+                }
+
+                @media (width < 550px) {
+                    grid-row: auto;
+                    grid-column: auto;
                 }
             }
         }

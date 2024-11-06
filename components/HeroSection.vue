@@ -31,20 +31,23 @@ import RunningLine from './modules/RunningLine.vue'
 .hero {
     &-container {
         min-height: 700px;
-        background-image: url('~/public/images/hero.png');
-        background-position: top;
+        background: url('~/public/images/hero.png'), rgba(233, 222, 212, 1);
         background-repeat: no-repeat;
-        background-size: auto;
         padding: 5px;
+        background-blend-mode: multiply;
 
-        @media (width < 1366px) {
-            background-size: cover;
+        @media (width < 900px) {
+            background-position: center;
         }
     }
 
     &__content {
         padding: 26px 5px 0 5px;
         margin: 0 auto;
+
+        @media (width < 900px) {
+            padding: 15px;
+        }
     }
 
     &__logo {
@@ -86,6 +89,7 @@ import RunningLine from './modules/RunningLine.vue'
 
         @media (width < 1100px) {
             font-size: 250%;
+            width: 100%;
         }
     }
 
@@ -96,6 +100,10 @@ import RunningLine from './modules/RunningLine.vue'
         line-height: 130%;
         text-align: center;
         color: #313131;
+
+        @media (width < 1100px) {
+           width: 100%;
+        }
     }
 
     &__buttons {
@@ -106,12 +114,21 @@ import RunningLine from './modules/RunningLine.vue'
         @media (width < 850px) {
             flex-direction: column;
             justify-content: center;
+            align-items: center;
         }
     }
 
     &__button {
         width: 263px;
         height: 72px;
+
+        @media (width < 850px) {
+            width: 80%;
+        }
+
+        @media (width < 450px) {
+            width: 100%;
+        }
     }
 }
 </style>

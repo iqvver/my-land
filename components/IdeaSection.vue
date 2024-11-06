@@ -1,13 +1,23 @@
 <script setup lang="ts"></script>
 <template>
-    <section class="idea l-container">
+    <section class="idea l-container desktop">
         <div class="idea__text">
-            Чтобы поддержать Международный васюкинский турнир посетите лекцию на тему: <text class="l-text-red">«Плодотворная дебютная идея»</text>
+            Чтобы поддержать Международный васюкинский турнир посетите лекцию на тему:
+            <text class="l-text-red">«Плодотворная дебютная идея»</text>
         </div>
         <div class="idea__img">
             <img src="~/public/images/idea.png" alt="idea" />
         </div>
     </section>
+    <div class="idea l-container mobile">
+        <div class="idea__text">
+            Чтобы поддержать Международный васюкинский турнир
+            <div class="idea__img">
+                <img src="~/public/images/idea.png" alt="idea" />
+            </div>
+            посетите лекцию на тему: <text class="l-text-red">«Плодотворная дебютная идея»</text>
+        </div>
+    </div>
 </template>
 <style scoped lang="scss">
 .idea {
@@ -33,6 +43,12 @@
         @media (width < 1100px) {
             font-size: 150%;
         }
+        @media (width < 1100px) {
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__img {
@@ -41,6 +57,20 @@
         & img {
             width: 100%;
         }
+    }
+}
+
+.desktop {
+    @media (width < 550px) {
+        display: none;
+    }
+}
+
+.mobile {
+    display: none;
+
+    @media (width < 550px) {
+        display: block;
     }
 }
 </style>

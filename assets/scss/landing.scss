@@ -28,6 +28,11 @@
     background: none;
     color: #1f1f1f;
     border: 2px solid #000;
+
+    @media (width < 850px) {
+        background-color: #fff;
+        opacity: .6;
+    }
 }
 
 .l-primary-button.secondary:hover {
