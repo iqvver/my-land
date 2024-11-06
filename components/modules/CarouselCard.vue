@@ -21,15 +21,22 @@ const { title, name, img } = defineProps<{
 </template>
 <style scoped lang="scss">
 .card {
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 394px;
-    height: 462px;
+    max-width: 394px;
+    height: 464px;
+
+    @media (width < 750px) {
+       height: 400px;
+    }
+
+    @media (width < 600px) {
+       height: 350px;
+    }
 
     &__img {
-        //width: 50px;
-
         & img {
             width: 100%;
             height: auto;
@@ -63,6 +70,8 @@ const { title, name, img } = defineProps<{
         height: 35px;
         border: 1px solid #3057a2;
         border-radius: 62px;
+        position: absolute;
+        bottom: 0;
 
         &:hover {
             background-color: #3057a2;

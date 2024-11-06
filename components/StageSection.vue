@@ -61,6 +61,11 @@
         height: 180px;
         transform: rotate(-5deg);
         margin-top: -100px;
+
+        @media (width < 945px) {
+            font-size: 250%;
+            margin-top: 0;
+        }
     }
 }
 .stage__subtitle {
@@ -79,6 +84,16 @@
 }
 .stage {
     margin-top: 200px;
+    width: 100%;
+
+    @media (width < 850px) {
+        margin-top: 100px;
+    }
+
+    @media (width < 650px) {
+        margin-top: 30px;
+    }
+    
 
     &__title {
         font-weight: 400;
@@ -90,20 +105,30 @@
         margin-bottom: 154px;
     }
     &__wrapper {
-        display: grid;
-        grid-template-rows: repeat(3, minmax(1fr, 112px));
-        grid-template-columns: repeat(3, minmax(1fr, 394px));
-        gap: 20px;
+        padding: 10px;
         width: 100%;
-        height: 100%;
+        display: grid;
+        grid-template: repeat(3, minmax(112px, 1fr)) / repeat(3, minmax(1fr, 394px));
+        gap: 20px;
+
+        @media (width < 1000px) {
+            grid-template: repeat(4, max-content) / repeat(2, 50%);
+            gap: 10px;
+        }
     }
     &__item {
+        width: auto;
         background-image: url('/public/images/card.png');
-        background-color: #e9ded4;
         background-blend-mode: overlay;
+        background-color: #e9ded4;
         display: flex;
         padding: 20px;
         gap: 16px;
+
+        @media (width < 850px) {
+            gap: 10px;
+            padding: 10px;
+        }
 
         &__number {
             min-width: 36px;
@@ -125,9 +150,19 @@
             grid-row: 1 / 3;
             grid-column: 3 / 4;
 
+            @media (width < 1000px) {
+                grid-row: auto;
+                grid-column: auto;
+            }
+
             &-two {
                 grid-row: 3 / 4;
                 grid-column: 2 / 4;
+
+                @media (width < 1000px) {
+                    grid-row: auto;
+                    grid-column: 1 / 3;
+                }
             }
         }
     }

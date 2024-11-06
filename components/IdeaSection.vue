@@ -18,6 +18,10 @@
     gap: 64px;
     width: 100%;
 
+    @media (width < 850px) {
+        margin-top: 30px;
+    }
+
     &__text {
         max-width: 57%;
         font-weight: 400;
@@ -25,6 +29,10 @@
         line-height: 135%;
         text-transform: uppercase;
         color: #313131;
+
+        @media (width < 1100px) {
+            font-size: 150%;
+        }
     }
 
     &__img {

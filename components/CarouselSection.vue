@@ -14,7 +14,7 @@ interface PlayerInterfaces extends Array<PlayerInterface> {}
 
 const config = {
     itemsToShow: 3,
-    itemsToScroll: 1,
+    itemsToScroll: 3,
     wrapAround: true,
     modelValue: 1,
 }
@@ -87,6 +87,17 @@ const playerList: PlayerInterfaces = [
 .carou {
     margin-top: 200px;
     margin-bottom: 140px;
+
+    @media (width < 850px) {
+        margin-top: 100px;
+        margin-bottom: 40px;
+    }
+
+    @media (width < 650px) {
+        margin-top: 40px;
+        margin-bottom: 0px;
+    }
+
     &__header {
         display: flex;
         justify-content: space-between;
@@ -99,6 +110,10 @@ const playerList: PlayerInterfaces = [
         line-height: 120%;
         text-transform: uppercase;
         color: #313131;
+
+        @media (width < 1100px) {
+            font-size: 150%;
+        }
     }
 
     &__btn {
@@ -118,6 +133,11 @@ const playerList: PlayerInterfaces = [
             display: flex;
             justify-content: center;
             align-items: center;
+
+            @media (width < 850px) {
+                width: 34px;
+                height: 34px;
+            }
 
             &:hover {
                 background-color: #fbce51;

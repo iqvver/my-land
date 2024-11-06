@@ -34,22 +34,32 @@
     justify-content: space-between;
     gap: 44px;
 
+    @media (width < 850px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
     &__descr {
-        width: 60%;
         font-weight: 400;
         font-size: 36px;
         line-height: 135%;
         text-transform: uppercase;
         color: #313131;
+
+        @media (width < 1100px) {
+            font-size: 150%;
+        }
     }
 
     &__img {
         max-width: 40%;
-        max-height: 527px;
+
+        @media (width < 850px) {
+            max-width: 50%;
+        }
 
         & img {
             width: 100%;
-            height: 100%;
         }
     }
 
@@ -81,6 +91,10 @@
             border-right: 2px solid #d0d0d0;
             display: flex;
             align-items: center;
+
+            @media (width < 1100px) {
+                font-size: 70%;
+            }
 
             &_bold {
                 font-weight: 600;

@@ -35,6 +35,7 @@ import RunningLine from './modules/RunningLine.vue'
         background-position: top;
         background-repeat: no-repeat;
         background-size: auto;
+        padding: 5px;
 
         @media (width < 1366px) {
             background-size: cover;
