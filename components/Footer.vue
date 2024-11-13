@@ -10,7 +10,7 @@
 
 <style scoped lang="scss">
 .footer {
-    height: 150px;
+    min-height: 150px;
     padding: 40px 72px 72px 72px;
     font-weight: 400;
     font-size: 16px;

@@ -18,6 +18,12 @@ const config = {
     wrapAround: true,
     modelValue: 1,
 }
+const configMobile = {
+    itemsToShow: 1,
+    itemsToScroll: 1,
+    wrapAround: true,
+    modelValue: 1,
+}
 const carouselRef = ref(0)
 const currentSlide = ref(0)
 const next = () => carouselRef.value.next()
@@ -74,7 +80,12 @@ const playerList: PlayerInterfaces = [
                 <button @click="next"><img src="../public/icons/arrowRight.svg" /></button>
             </div>
         </div>
-        <Carousel ref="carouselRef" v-bind="config" v-model="currentSlide">
+        <Carousel class="desktop" ref="carouselRef" v-bind="config" v-model="currentSlide">
+            <Slide v-for="slide in playerList" :key="slide.id">
+                <CarouselCard :title="slide.title" :name="slide.name" :img="slide.img" />
+            </Slide>
+        </Carousel>
+        <Carousel class="mobile" ref="carouselRef" v-bind="configMobile" v-model="currentSlide">
             <Slide v-for="slide in playerList" :key="slide.id">
                 <CarouselCard :title="slide.title" :name="slide.name" :img="slide.img" />
             </Slide>
@@ -90,12 +101,11 @@ const playerList: PlayerInterfaces = [
 
     @media (width < 850px) {
         margin-top: 100px;
-        margin-bottom: 40px;
+        margin-bottom: 100px;
     }
 
     @media (width < 650px) {
         margin-top: 40px;
-        margin-bottom: 0px;
     }
 
     &__header {
@@ -114,6 +124,9 @@ const playerList: PlayerInterfaces = [
         @media (width < 1100px) {
             font-size: 150%;
         }
+        @media (width < 500px) {
+            font-size: 130%;
+        }
     }
 
     &__btn {
@@ -121,6 +134,7 @@ const playerList: PlayerInterfaces = [
         justify-content: right;
         align-items: center;
         gap: 16px;
+        width: 100%;
 
         & button {
             width: 44px;
@@ -157,5 +171,19 @@ const playerList: PlayerInterfaces = [
 
 .carousel {
     margin-top: 60px;
+}
+
+.desktop {
+    @media (width < 500px) {
+        display: none;
+    }
+}
+
+.mobile {
+    display: none;
+
+    @media (width < 500px) {
+        display: block;
+    }
 }
 </style>

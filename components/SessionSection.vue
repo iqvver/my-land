@@ -57,6 +57,9 @@
         @media (width < 850px) {
             max-width: 50%;
         }
+        @media (width < 550px) {
+            max-width: 100%;
+        }
 
         & img {
             width: 100%;
@@ -79,6 +82,12 @@
         gap: 0px;
         text-transform: none;
 
+        @media (width < 500px) {
+            margin-top: 44px;
+            grid-template-rows: repeat(5, 1fr);
+            grid-template-columns: repeat(1, 1fr);
+        }
+
         &__item {
             height: 56px;
             font-weight: 400;
@@ -96,12 +105,23 @@
                 font-size: 70%;
             }
 
+            @media (width < 500px) {
+                height: 30px;
+                border-bottom: none;
+                border-right: none;
+            }
+
             &_bold {
                 font-weight: 600;
                 color: #313131;
                 opacity: 1;
                 padding: 0 16px;
                 border-right: none;
+
+                @media (width < 500px) {
+                    border-bottom: 2px solid #d0d0d0;
+                    padding: 0;
+                }
             }
         }
     }

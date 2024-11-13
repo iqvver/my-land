@@ -28,15 +28,17 @@ const { title, name, img } = defineProps<{
     max-width: 394px;
     height: 464px;
 
-    @media (width < 750px) {
-       height: 400px;
+    @media (width < 600px) {
+        height: 350px;
     }
 
-    @media (width < 600px) {
-       height: 350px;
+    @media (width < 500px) {
+        height: 400px;
     }
 
     &__img {
+        max-width: 250px;
+
         & img {
             width: 100%;
             height: auto;

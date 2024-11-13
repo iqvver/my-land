@@ -1,11 +1,25 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { Carousel, Slide, Pagination } from 'vue3-carousel'
+
+const config = {
+    itemsToShow: 1,
+    itemsToScroll: 1,
+    wrapAround: true,
+    modelValue: 1,
+}
+
+const carouselRef = ref(0)
+const currentSlide = ref(0)
+const next = () => carouselRef.value.next()
+const prev = () => carouselRef.value.prev()
+</script>
 <template>
     <section class="stage l-container">
         <div class="stage__title">
             Этапы преображения
             <div class="stage__subtitle">Васюков</div>
         </div>
-        <div class="stage__wrapper">
+        <div class="stage__wrapper desktop">
             <div class="stage__item">
                 <div class="stage__item__number">1</div>
                 <div class="stage__item__text">Строительство железнодорожной магистрали Москва-Васюки</div>
@@ -48,9 +62,122 @@
                 </div>
             </div>
         </div>
+        <div class="stage__wrapper mobile">
+            <Carousel ref="carouselRef" v-bind="config" v-model="currentSlide">
+                <template #addons>
+                    <div class="slide__btn">
+                        <button @click="prev"><img src="../public/icons/arrowLeft.svg" /></button>
+                        <Pagination />
+                        <button @click="next"><img src="../public/icons/arrowRight.svg" /></button>
+                    </div>
+                </template>
+                <Slide class="slide" key="1">
+                    <div class="stage__item">
+                        <div class="stage__item__number">1</div>
+                        <div class="stage__item__text">Строительство железнодорожной магистрали Москва-Васюки</div>
+                    </div>
+                    <div class="stage__item">
+                        <div class="stage__item__number">2</div>
+                        <div class="stage__item__text">
+                            Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов
+                        </div>
+                    </div>
+                </Slide>
+                <Slide class="slide" key="2">
+                    <div class="stage__item">
+                        <div class="stage__item__number">3</div>
+                        <div class="stage__item__text">
+                            Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов,
+                            икры, шоколадных конфет
+                        </div>
+                    </div>
+                </Slide>
+                <Slide class="slide" key="3">
+                    <div class="stage__item">
+                        <div class="stage__item__number">4</div>
+                        <div class="stage__item__text">Строительство железнодорожной магистрали Москва-Васюки</div>
+                    </div>
+                    <div class="stage__item">
+                        <div class="stage__item__number">5</div>
+                        <div class="stage__item__text">
+                            Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов
+                        </div>
+                    </div>
+                </Slide>
+                <Slide class="slide" key="4">
+                    <div class="stage__item">
+                        <div class="stage__item__number">6</div>
+                        <div class="stage__item__text">
+                            Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов
+                            и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн
+                        </div>
+                    </div>
+                </Slide>
+                <Slide class="slide" key="5">
+                    <div class="stage__item">
+                        <div class="stage__item__number">7</div>
+                        <div class="stage__item__text">
+                            Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов,
+                            икры, шоколадных конфет
+                        </div>
+                    </div>
+                </Slide>
+            </Carousel>
+        </div>
     </section>
 </template>
 <style scoped lang="scss">
+.slide {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+
+    & div {
+        align-items: center;
+    }
+
+    &__btn {
+        margin-top: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+
+        & button {
+            width: 44px;
+            height: 44px;
+            background-color: #313131;
+            border: none;
+            border-radius: 100%;
+            font-size: 18px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @media (width < 850px) {
+                width: 34px;
+                height: 34px;
+            }
+
+            &:hover {
+                background-color: #fbce51;
+            }
+        }
+
+        &_descr {
+            display: flex;
+            gap: 5px;
+
+            & text {
+                color: #9b9b9b;
+            }
+        }
+    }
+}
 .item__img {
     display: flex;
     position: relative;
@@ -118,6 +245,11 @@
         @media (width < 850px) {
             width: 100%;
             font-size: 300%;
+            margin-bottom: 100px;
+        }
+
+        @media (width < 460px) {
+            margin-bottom: 150px;
         }
     }
     &__wrapper {
@@ -145,6 +277,7 @@
         display: flex;
         padding: 20px;
         gap: 16px;
+        height: 100%;
 
         @media (width < 850px) {
             gap: 10px;
@@ -191,6 +324,20 @@
                 }
             }
         }
+    }
+}
+
+.desktop {
+    @media (width < 500px) {
+        display: none;
+    }
+}
+
+.mobile {
+    display: none;
+
+    @media (width < 500px) {
+        display: block;
     }
 }
 </style>

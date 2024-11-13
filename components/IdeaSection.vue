@@ -52,7 +52,7 @@
     }
 
     &__img {
-        max-width: 394px;
+        width: 100%;
 
         & img {
             width: 100%;
@@ -61,7 +61,7 @@
 }
 
 .desktop {
-    @media (width < 550px) {
+    @media (width < 600px) {
         display: none;
     }
 }
@@ -69,7 +69,7 @@
 .mobile {
     display: none;
 
-    @media (width < 550px) {
+    @media (width < 600px) {
         display: block;
     }
 }
