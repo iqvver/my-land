@@ -1,4 +1,3 @@
-<script setup lang="ts"></script>
 <template>
     <section class="idea l-container desktop">
         <div class="idea__text">

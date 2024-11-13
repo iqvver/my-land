@@ -31,6 +31,7 @@ import RunningLine from './modules/RunningLine.vue'
 .hero {
     &-container {
         min-height: 700px;
+        min-height: max(100%, 700px);
         background: url('~/public/images/hero.png'), rgba(233, 222, 212, 1);
         background-repeat: no-repeat;
         padding: 5px;
@@ -102,7 +103,7 @@ import RunningLine from './modules/RunningLine.vue'
         color: #313131;
 
         @media (width < 1100px) {
-           width: 100%;
+            width: 100%;
         }
     }
 

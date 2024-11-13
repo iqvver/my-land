@@ -10,6 +10,7 @@ interface PlayerInterface {
     name: string
     img: string
 }
+
 interface PlayerInterfaces extends Array<PlayerInterface> {}
 
 const config = {
@@ -18,12 +19,14 @@ const config = {
     wrapAround: true,
     modelValue: 1,
 }
+
 const configMobile = {
     itemsToShow: 1,
     itemsToScroll: 1,
     wrapAround: true,
     modelValue: 1,
 }
+
 const carouselRef = ref(0)
 const currentSlide = ref(0)
 const next = () => carouselRef.value.next()
@@ -124,6 +127,7 @@ const playerList: PlayerInterfaces = [
         @media (width < 1100px) {
             font-size: 150%;
         }
+        
         @media (width < 500px) {
             font-size: 130%;
         }

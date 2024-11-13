@@ -1,4 +1,3 @@
-<script setup lang="ts"></script>
 <template>
     <section class="session l-container">
         <div class="session__img">
@@ -77,15 +76,13 @@
     &__table {
         margin-top: 60px;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(5, 1fr);
+        grid-template: repeat(5, 1fr) / repeat(2, 1fr);
         gap: 0px;
         text-transform: none;
 
         @media (width < 500px) {
             margin-top: 44px;
-            grid-template-rows: repeat(5, 1fr);
-            grid-template-columns: repeat(1, 1fr);
+            grid-template: repeat(5, 1fr) / repeat(1, 1fr);
         }
 
         &__item {

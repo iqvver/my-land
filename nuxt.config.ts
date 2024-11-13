@@ -1,17 +1,27 @@
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+    devtools: { enabled: true },
 
-  app: {
-      baseURL: '/',
-  },
+    app: {
+        baseURL: '/',
+    },
 
-  components: [
-      {
-          path: '~/components',
-          extensions: ['.vue'],
-      },
-  ],
+    css: ['assets/global.css'],
+    components: [
+        {
+            path: '~/components',
+            extensions: ['.vue'],
+        },
+    ],
 
-  css: ['assets/global.css'],
-  compatibilityDate: '2024-11-05',
+    vite: {
+        css: {
+            preprocessorOptions: {
+                sass: {
+                    api: 'modern',
+                },
+            },
+        },
+    },
+
+    compatibilityDate: '2024-11-05',
 })

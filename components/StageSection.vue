@@ -147,8 +147,8 @@ const prev = () => carouselRef.value.prev()
         gap: 16px;
 
         & button {
-            width: 44px;
-            height: 44px;
+            width: min(44px, 34px);
+            height: min(44px, 34px);
             background-color: #313131;
             border: none;
             border-radius: 100%;
@@ -157,11 +157,6 @@ const prev = () => carouselRef.value.prev()
             display: flex;
             justify-content: center;
             align-items: center;
-
-            @media (width < 850px) {
-                width: 34px;
-                height: 34px;
-            }
 
             &:hover {
                 background-color: #fbce51;
@@ -178,6 +173,7 @@ const prev = () => carouselRef.value.prev()
         }
     }
 }
+
 .item__img {
     display: flex;
     position: relative;
@@ -199,6 +195,7 @@ const prev = () => carouselRef.value.prev()
         }
     }
 }
+
 .stage__subtitle {
     display: flex;
     align-items: center;
@@ -221,6 +218,7 @@ const prev = () => carouselRef.value.prev()
         }
     }
 }
+
 .stage {
     margin-top: 200px;
     width: 100%;
@@ -252,6 +250,7 @@ const prev = () => carouselRef.value.prev()
             margin-bottom: 150px;
         }
     }
+
     &__wrapper {
         padding: 10px;
         width: 100%;
@@ -269,6 +268,7 @@ const prev = () => carouselRef.value.prev()
             gap: 10px;
         }
     }
+
     &__item {
         width: auto;
         background-image: url('/public/images/card.png');
@@ -293,6 +293,7 @@ const prev = () => carouselRef.value.prev()
             align-items: center;
             border-radius: 100%;
         }
+
         &__text {
             font-weight: 500;
             font-size: 20px;

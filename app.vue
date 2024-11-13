@@ -6,4 +6,3 @@
     <CarouselSection />
     <Footer />
 </template>
-<style scoped lang="scss"></style>

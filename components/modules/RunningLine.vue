@@ -1,5 +1,5 @@
 <template>
-    <marquee class="line" direction="right">
+    <marquee class="line" direction="right" bgcolor="#F54932" height="60px">
         <li class="line__item">&#9679; Дело помощи утопающим — дело рук самих утопающих!</li>
         <li class="line__item">&#9679; Шахматы двигают вперед не только культуру, но и экономику!</li>
         <li class="line__item">&#9679; Лед тронулся, господа присяжные заседатели!</li>
@@ -7,10 +7,8 @@
 </template>
 <style scoped lang="scss">
 .line {
-    background-color: #F54932;
     margin: 0 auto;
     width: 100%;
-    height: 60px;
     font-weight: 400;
     font-size: 22px;
     line-height: 110%;
